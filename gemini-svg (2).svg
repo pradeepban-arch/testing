@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" id="bitplanes-autonomous-svg">
+    <style>
+        /* Forces the SVG outer application boundary to match the screen viewport context */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background-color: #000000;
+            overflow: hidden;
+        }
+        foreignObject {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+    <foreignObject x="0" y="0" width="1920" height="1080">
+        <xhtml:div xmlns:xhtml="http://www.w3.org/1999/xhtml" id="svg-xhtml-root" style="position: relative; width: 100vw; height: 100vh; display: block; background: #000;">
+            
+            <xhtml:style type="text/css">
+                /* PASTE THE RAW CONTENTS OF YOUR STYLES.CSS HERE */
+                
+                /* CRITICAL OVERRIDE FIX FOR SVG SANDBOXING: */
+                /* Keeps canvas configurations from collapsing to 0x0 pixels inside the XML space */
+                #canvas, #canvas1, #canvas2, .demo {
+                    display: block !important;
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100vw !important;
+                    height: 100vh !important;
+                    z-index: 1;
+                }
+                .welcome, .ui {
+                    z-index: 10 !important; /* Forces interactive controls above canvas renders */
+                }
+            </xhtml:style>
+
+            <xhtml:main>
+                <xhtml:section class="welcome">
+                    <xhtml:h1>
+                        <xhtml:i class="logo"></xhtml:i>
+                        Bit Planes
+                        <xhtml:i class="logo"></xhtml:i>
+                    </xhtml:h1>
+
+                    <xhtml:form id="game">
+                        <xhtml:label>
+                            <xhtml:input type="text" name="nickname" placeholder="Nickname" />
+                        </xhtml:label>
+                        <xhtml:div class="game-modes">
+                            <xhtml:div class="game-modes-column">
+                                <xhtml:p><strong>Game modes:</strong></xhtml:p>
+                                <xhtml:div>
+                                    <xhtml:label title="Everyone against everyone.">
+                                        <xhtml:input type="radio" name="mode" value="death-match" checked="checked" autofocus="autofocus" /> Death match
+                                    </xhtml:label>
+                                </xhtml:div>
+                                <xhtml:div>
+                                    <xhtml:label title="Fight between teams.">
+                                        <xhtml:input type="radio" name="mode" value="teams" /> Teams
+                                    </xhtml:label>
+                                </xhtml:div>
+                                <xhtml:div>
+                                    <xhtml:label title="One on one duel.">
+                                        <xhtml:input type="radio" name="mode" value="duel" /> Duel
+                                    </xhtml:label>
+                                </xhtml:div>
+                                <xhtml:div>
+                                    <xhtml:label title="Survive with a waives of enemies.">
+                                        <xhtml:input type="radio" name="mode" value="survival" /> Survival
+                                    </xhtml:label>
+                                </xhtml:div>
+                            </xhtml:div>
+                            <xhtml:div class="game-modes-column">
+                                <xhtml:p><strong>Fun modes:</strong></xhtml:p>
+                                <xhtml:div>
+                                    <xhtml:label title="Two big teams against each other.">
+                                        <xhtml:input type="radio" name="mode" value="swarm" /> Swarm
+                                    </xhtml:label>
+                                </xhtml:div>
+                                <xhtml:div>
+                                    <xhtml:label title="Total domination.">
+                                        <xhtml:input type="radio" name="mode" value="domination" /> Domination
+                                    </xhtml:label>
+                                </xhtml:div>
+                                <xhtml:div>
+                                    <xhtml:label title="Revenge of cows.">
+                                        <xhtml:input type="radio" name="mode" value="revenge" /> Revenge
+                                    </xhtml:label>
+                                </xhtml:div>
+                            </xhtml:div>
+                            <xhtml:div class="game-modes-column">
+                                <xhtml:p><strong>Split screen:</strong></xhtml:p>
+                                <xhtml:div>
+                                    <xhtml:label title="Split duel">
+                                        <xhtml:input type="radio" name="mode" value="split-duel" /> Duel
+                                    </xhtml:label>
+                                </xhtml:div>
+                            </xhtml:div>
+                        </xhtml:div>
+                        <xhtml:div class="action">
+                            <xhtml:button class="btn">‣ Start</xhtml:button>
+                        </xhtml:div>
+                    </xhtml:form>
+
+                    <xhtml:div class="controls-map">
+                        <xhtml:div>
+                            <xhtml:p><strong>Controls:</strong><xhtml:br /></xhtml:p>
+                            <xhtml:ul>
+                                <xhtml:li>Arrows <xhtml:kbd>↑</xhtml:kbd><xhtml:kbd>↓</xhtml:kbd> — thrust level</xhtml:li>
+                                <xhtml:li>Arrows <xhtml:kbd>←</xhtml:kbd><xhtml:kbd>→</xhtml:kbd> — elevator controls</xhtml:li>
+                                <xhtml:li><xhtml:kbd>Space</xhtml:kbd> — fire a gun</xhtml:li>
+                                <xhtml:li><xhtml:kbd>X</xhtml:kbd> — deploy a missile</xhtml:li>
+                                <xhtml:li><xhtml:kbd>C</xhtml:kbd> — catapult / parachute</xhtml:li>
+                            </xhtml:ul>
+                        </xhtml:div>
+                        <xhtml:div>
+                            <xhtml:p><strong>Split screen:</strong><xhtml:br /></xhtml:p>
+                            <xhtml:ul>
+                                <xhtml:li>Player 1 – <xhtml:kbd>↑</xhtml:kbd><xhtml:kbd>↓</xhtml:kbd><xhtml:kbd>←</xhtml:kbd><xhtml:kbd>→</xhtml:kbd> + catapult with <xhtml:kbd>M</xhtml:kbd> and fire with <xhtml:kbd>,</xhtml:kbd><xhtml:kbd>.</xhtml:kbd></xhtml:li>
+                                <xhtml:li>Player 2 – <xhtml:kbd>W</xhtml:kbd><xhtml:kbd>S</xhtml:kbd><xhtml:kbd>A</xhtml:kbd><xhtml:kbd>D</xhtml:kbd> + catapult with <xhtml:kbd>C</xhtml:kbd> and fire with <xhtml:kbd>V</xhtml:kbd><xhtml:kbd>B</xhtml:kbd></xhtml:li>
+                            </xhtml:ul>
+                        </xhtml:div>
+                    </xhtml:div>
+
+                    <xhtml:div class="stats"></xhtml:div>
+                    <xhtml:canvas class="demo"></xhtml:canvas>
+                </xhtml:section>
+            </xhtml:main>
+
+            <xhtml:div class="ui">
+                <xhtml:div class="cockpit">
+                    <xhtml:div class="missile-capacity">
+                        <xhtml:div class="missile"></xhtml:div>
+                        <xhtml:div class="missile"></xhtml:div>
+                    </xhtml:div>
+                    <xhtml:div class="thrust">
+                        <xhtml:div class="thrust-level"></xhtml:div>
+                    </xhtml:div>
+                    <xhtml:div class="ammo-capacity">
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div><xhtml:div class="ammo"></xhtml:div>
+                        <xhtml:div class="ammo"></xhtml:div>
+                    </xhtml:div>
+                </xhtml:div>
+                <xhtml:canvas class="minimap"></xhtml:canvas>
+                <xhtml:div class="log"></xhtml:div>
+            </xhtml:div>
+
+            <xhtml:canvas id="canvas"></xhtml:canvas>
+            <xhtml:canvas id="canvas1"></xhtml:canvas>
+            <xhtml:canvas id="canvas2"></xhtml:canvas>
+
+            <xhtml:script type="text/javascript">
+            <![CDATA[
+                /* PASTE THE COMPLETE RAW CONTENTS OF YOUR INDEX.JS HERE */
+                /* The CDATA container prevents logic statements (like '<' symbols in loops) from breaking XML tree parsing */
+            ]]>
+            </xhtml:script>
+            
+        </xhtml:div>
+    </foreignObject>
+</svg>
